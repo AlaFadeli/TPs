@@ -2,7 +2,7 @@
 #import "@preview/typsium:0.3.0": *
 
 #show: elsearticle.with(
-  title: "TW N°1: Volumetric Titration of Acid–Base Reactions ",
+  title: "PW N°1: Volumetric Titration of Acid–Base Reactions ",
   authors: (
     (
       name: "Fadeli Ala Eddine",
