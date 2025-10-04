@@ -51,16 +51,17 @@ $ "CH"_3"COOH" ⇌ "CH"_3"COO"^- + H^+ $
   stroke: none,
   gutter: 0.2em,
   fill: (x, y) =>
-    if x == 0 or y == 0 { gray },
+    if x == 0 or y == 0 { gray },          
   inset: (right: 1.5em),
 )
 
 #show table.cell: it => {
   if it.x == 0 or it.y == 0 {
     set text(white)
-    strong(it)  
-  } else if it.body == [] {
-    // Replace empty cells with 'N/A'
+    strong(it)
+
+  }
+  else if it.body == [] {
     pad(..it.inset)[_N/A_]
   } else {
     it
@@ -68,35 +69,39 @@ $ "CH"_3"COOH" ⇌ "CH"_3"COO"^- + H^+ $
 }
 
 #let a = table.cell(
-  fill: red.lighten(1%),
+  fill: gray,
 )[Red]
 #let b = table.cell(
-  fill: orange.lighten(1%),
+  fill: gray,
 )[Orange]
 #let c = table.cell(
-  fill: orange.lighten(50%),
+  fill: gray,
 )[Methyl orange]
 #let d = table.cell(
-  fill: purple.lighten(80%),
+  fill: gray,
 )[Pink]
-#let e = table.cell( fill: aqua.lighten(50%),)[Phenolphtalein]
+#let e = table.cell( fill: gray,)[Phenolphtalein]
 
 #let f = table.cell(
-  fill: red.lighten(1%),
+  fill: gray,
 )[Stronge acid]
 #let g = table.cell(
-  fill: orange.lighten(1%),
+  fill: gray,
 )[Weak acid]
 #let h = table.cell(
-  fill: purple.lighten(80%),
+  fill: gray,
 )[Strong base]
+
+#let l = table.cell( fill: gray,)[1]
+#let m = table.cell( fill: gray,)[13]
+#let n = table.cell( fill: gray,)[4-5]
 #table(
   columns: 5,
   [Solution], [Indicator], [Color observed], [Nature],[Approx.pH],
 
-  [HCl],c, a, f,[~1],
-  [NaOH], e, d, h,[~13],
-  [CH₃COOH],c,b,g,[4-5],
+  [HCl],c, a, f,l,
+  [NaOH], e, d, h,m,
+  [CH₃COOH],c,b,g,n,
 )
 === *Preparation & Dilution*
 ==== *Volume of concentrated HCl required for 1 L of 1 N solution*:
